@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="292.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ex01.MemberController">
+   <children>
+      <ImageView fitHeight="330.0" fitWidth="515.0" layoutX="-7.0" layoutY="1.0" opacity="0.42" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../../Users/kgitbank/Desktop/unnamed.jpg" />
+         </image>
+      </ImageView>
+      <TextField fx:id="fxID" layoutX="314.0" layoutY="64.0" prefHeight="23.0" prefWidth="158.0" />
+      <Label layoutX="202.0" layoutY="14.0" text="회원가입">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="25.0" layoutY="68.0" text="이  름" />
+      <TextField fx:id="fxName" layoutX="69.0" layoutY="64.0" />
+      <Label layoutX="262.0" layoutY="68.0" text="아이디" />
+      <Label layoutX="17.0" layoutY="106.0" text="패스워드" />
+      <PasswordField fx:id="fxPw" layoutX="69.0" layoutY="102.0" />
+      <Label layoutX="232.0" layoutY="106.0" text="패스워드 확인" />
+      <PasswordField fx:id="fxPwOk" layoutX="314.0" layoutY="102.0" prefHeight="23.0" prefWidth="158.0" />
+      <Label layoutX="26.0" layoutY="149.0" text="성  별" />
+      <RadioButton fx:id="rdoMan" layoutX="93.0" layoutY="150.0" mnemonicParsing="false" text="남성">
+         <toggleGroup>
+            <ToggleGroup fx:id="tg" />
+         </toggleGroup></RadioButton>
+      <RadioButton fx:id="rdoWoman" layoutX="157.0" layoutY="150.0" mnemonicParsing="false" text="여성" toggleGroup="$tg" />
+      <Label layoutX="256.0" layoutY="149.0" text="연령구분" />
+      <ComboBox fx:id="cmbAge" layoutX="318.0" layoutY="146.0" prefHeight="23.0" prefWidth="158.0" promptText="연령대 선택" />
+      <Label layoutX="10.0" layoutY="190.0" text="좋아하는 것" />
+      <CheckBox fx:id="chkMusic" layoutX="93.0" layoutY="190.0" mnemonicParsing="false" text="음악" />
+      <CheckBox fx:id="chkSport" layoutX="157.0" layoutY="191.0" mnemonicParsing="false" text="스포츠" />
+      <CheckBox fx:id="chkMovie" layoutX="231.0" layoutY="191.0" mnemonicParsing="false" text="영화" />
+      <Button layoutX="166.0" layoutY="248.0" mnemonicParsing="false" onAction="#membershipProc" text="회원가입" />
+      <Button layoutX="253.0" layoutY="248.0" mnemonicParsing="false" onAction="#memberCancle" prefHeight="23.0" prefWidth="64.0" text="취소" />
+   </children>
+</AnchorPane>
